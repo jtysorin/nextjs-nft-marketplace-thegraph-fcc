@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useWeb3Contract } from "react-moralis";
 import nftMarketPlaceAbi from "../constants/NFTMarketPlace.json";
 import { ethers } from "ethers";
-import Image from "next/image";
 
 export default function UpdateListingModal({
     nftAddress,
@@ -64,7 +63,7 @@ export default function UpdateListingModal({
                     padding: "20px 0 20px 0",
                 }}
             >
-                <Image loader={() => imageURI} src={imageURI} height="200" width="200"></Image>
+                <img src={imageURI} height="200" width="200"/>
                 <br></br>
                 <Input
                     label="Update listing price in L1 Currency (ETH)"
